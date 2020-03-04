@@ -60,7 +60,21 @@ $game = [
 unset($game['player']['weapons']['available'][0]);
 $active_id = $game['player']['weapons']['active_id'];
 unset($game['player']['weapons']['available']['active_id']);
-$keys = array_keys($game['player']['weapons']['available']);
-$game['player']['weapons']['active_id'] = $keys(0);
+
+$new_active_id = array_key_first($game['player']['weapons']['available']);
+$game['player']['weapons']['active_id'] = $new_active_id;
+
+$game['player']['weapons']['available'][] = [
+    'name' => 'Spray Can',
+    'damage' => '20',
+    'icon' => '.....',
+    'type' => 'poison',
+    'ammo' => [
+        'magazine_size' => 50,
+        'in_magazine' => 40,
+        'total' => 900,
+    ]
+];
+
 var_dump($game);
 ?>
