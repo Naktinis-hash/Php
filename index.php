@@ -60,5 +60,7 @@ $game = [
 unset($game['player']['weapons']['available'][0]);
 $active_id = $game['player']['weapons']['active_id'];
 unset($game['player']['weapons']['available']['active_id']);
+$keys = array_keys($game['player']['weapons']['available']);
+$game['player']['weapons']['active_id'] = $keys(0);
 var_dump($game);
 ?>
