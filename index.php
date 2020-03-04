@@ -1,27 +1,37 @@
 <?php
-$title = 'Bokalai';
+$ataskaita = [
+    [
+        'vardas' => 'Petras',
+        'pavarde' => 'Lizius',
+        'daiktai' =>[
+            [
+            'qty' => 1,
+            'item' => 'Toyota Prius',
+             'type' => 'car'
+            ],
+        ],
+    ],
+    [
+        'vardas' => 'Ona',
+        'pavarde' => 'Lazauskiene',
+        'daiktai'=> [
+            [
+            'kiekis' => 3,
+            'item' => 'malkos'
+            ],
+        ],
+    ],
+    [
+        'vardas' => 'Algirdas',
+        'pavarde' => 'Palutinskas',
+        'daiktai' =>[
+            [
+           'kiekis' => 3,
+           'item' => 'malkos'
+           ],
+        ],
+    ],
+];
 
-$money =rand(1, 15);
-$bokal_cost = 3;
-
+var_dump($ataskaita);
 ?>
-
-<html>
-<head>
-    <title><?php print $title ?></title>
-</head>
-<style>
-    .bg-img {
-        width: 150px;
-        height: 150px;
-        background-size: cover;
-    }
-</style>
-<body>
-    <div class="bg-img">
-        <?php for (; $money > $bokal_cost; $money -= $bokal_cost):?>
-        <img src="https://dovanusalis.lt/image/cache/catalog/products/110/alaus-bokalas-stipruoliui-1-800x800.jpg" width="132px" alt="alus"/>
-        <?php endfor ;?>
-    </div>
-</body>
-</html>
